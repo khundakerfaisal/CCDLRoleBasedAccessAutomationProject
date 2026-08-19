@@ -1,0 +1,34 @@
+[
+    {
+        "User": 1,
+        "StartTime": "8/6/2026, 10:57:31 AM",
+        "FinishTime": "8/6/2026, 10:57:53 AM",
+        "Duration": "21.41 sec",
+        "Status": "FAILED",
+        "Error": "page.goto: net::ERR_CONNECTION_TIMED_OUT at http://192.168.3.212:8069//web/login\nCall log:\n\u001b[2m  - navigating to \"http://192.168.3.212:8069//web/login"
+    },
+    {
+        "User": 2,
+        "StartTime": "8/6/2026, 10:57:41 AM",
+        "FinishTime": "8/6/2026, 10:58:03 AM",
+        "Duration": "21.19 sec",
+        "Status": "FAILED",
+        "Error": "page.goto: net::ERR_CONNECTION_TIMED_OUT at http://192.168.3.212:8069//web/login\nCall log:\n\u001b[2m  - navigating to \"http://192.168.3.212:8069//web/login"
+    },
+    {
+        "User": 3,
+        "StartTime": "8/6/2026, 10:57:51 AM",
+        "FinishTime": "8/6/2026, 10:58:13 AM",
+        "Duration": "21.23 sec",
+        "Status": "FAILED",
+        "Error": "page.goto: net::ERR_CONNECTION_TIMED_OUT at http://192.168.3.212:8069//web/login\nCall log:\n\u001b[2m  - navigating to \"http://192.168.3.212:8069//web/login"
+    },
+    {
+        "User": 4,
+        "StartTime": "8/6/2026, 10:58:01 AM",
+        "FinishTime": "8/6/2026, 10:58:23 AM",
+        "Duration": "21.23 sec",
+        "Status": "FAILED",
+        "Error": "page.goto: net::ERR_CONNECTION_TIMED_OUT at http://192.168.3.212:8069//web/login\nCall log:\n\u001b[2m  - navigating to \"http://192.168.3.212:8069//web/login"
+    }
+]

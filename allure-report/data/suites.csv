@@ -1,0 +1,6 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","17008","Create New SO","chromium","2026-08-06","passed","2026-08-06","Sales Flow - Sales Order Depot Bag full process check","POM\DepotSalesTest.spec.js","",""
+"","9850","Create New Loading Slip","chromium","2026-08-06","passed","2026-08-06","Sales Flow - Sales Order Depot Bag full process check","POM\DepotSalesTest.spec.js","",""
+"","10721","Create New Fleet Entry","chromium","2026-08-06","passed","2026-08-06","Sales Flow - Sales Order Depot Bag full process check","POM\DepotSalesTest.spec.js","",""
+"","12579","Create New Allocation","chromium","2026-08-06","passed","2026-08-06","Sales Flow - Sales Order Depot Bag full process check","POM\DepotSalesTest.spec.js","",""
+"","16504","Create New Delivery Advice","chromium","2026-08-06","passed","2026-08-06","Sales Flow - Sales Order Depot Bag full process check","POM\DepotSalesTest.spec.js","",""
