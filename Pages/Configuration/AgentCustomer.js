@@ -61,7 +61,7 @@ export class AgentCustomerPage {
         await this.createNewButton.nth(2).click();
 
         // Customer Name
-        const customerName = generateAgentCustomer.generateAutoAgentCustomer();
+        const customerName = await generateAgentCustomer.generateAutoAgentCustomer();
 
         await this.inputCustomer.fill(customerName);
 
@@ -84,18 +84,13 @@ export class AgentCustomerPage {
             button: "middle"
         });
 
+        await this.page.waitForTimeout(1000);
+
         const newPage = await pagePromise;
         await newPage.waitForLoadState();
 
 
-        // const [accountPage] = await Promise.all([
-        //     this.page.context().waitForEvent("page"),
-        //     this.accountingMenu.click({
-        //         button: "middle"
-        //     })
-        // ]);
 
-        // await newPage.waitForLoadState();
 
         // Accounting locators
         const accountingConfigurationMenu =
@@ -117,11 +112,18 @@ export class AgentCustomerPage {
         await newPage.locator("#account_type_0")
             .selectOption({ label: "Receivable" });
 
+
+        await newPage.waitForTimeout(500);
+
         await newPage.locator("#group_id_0")
             .fill("Dealers sales");
 
+        await newPage.waitForTimeout(500);
+
         await newPage.locator("#group_id_0")
             .press("Enter");
+
+        await newPage.waitForTimeout(500);
 
         await newPage.locator("//button[@data-tooltip='Save manually']")
             .click();
@@ -150,13 +152,6 @@ export class AgentCustomerPage {
         await this.inputRegion.fill("CTG METRO");
         await this.inputRegion.press("Enter");
 
-        // await UtilsPage.scrollUp(this.page);
-
-        await this.inputTinNo.fill(generateRandomTinNumber().toString());
-
-        // await UtilsPage.scrollDown(this.page);
-        // await UtilsPage.scrollDown(this.page);
-
         await this.selectMaritalStatus.selectOption({
             label: "Married"
         });
@@ -164,6 +159,19 @@ export class AgentCustomerPage {
         const today = new Date().toISOString().split("T")[0];
 
         await this.marriageDate.fill(today);
+
+
+
+        await this.page.waitForTimeout(2000);
+
+
+        const tinNumber = generateRandomTinNumber();
+        console.log("Generated TIN:", tinNumber);
+        await this.inputTinNo.click();
+        await this.inputTinNo.fill(String(tinNumber));
+        await this.page.waitForTimeout(500);
+
+
 
         await this.page.evaluate(() => {
             window.scrollBy(0, 1000);
@@ -174,7 +182,8 @@ export class AgentCustomerPage {
         await this.accountHead.fill(customerName);
         await this.accountHead.press("Enter");
 
-        // await this.paymentTypeCheck.nth(2).click();
+        await this.paymentTypeCheck.nth(2).click();
+        await this.page.waitForTimeout(2000);
 
         await this.page.evaluate(() => {
             window.scrollTo(0, 1000);
