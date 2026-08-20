@@ -13,7 +13,7 @@ class LoginPage {
             fs.readFileSync('./tests/resources/LoginUrl.json', 'utf8')
         );
 
-        this.loginUrl = data.PilotloginUrl;               // Use this line for pilot server login
+        // this.loginUrl = data.PilotloginUrl;               // Use this line for pilot server login
         this.loginUrl = data.CCDLTestloginUrl;               // Use this line for CCDL server login
 
         // this.loginUrl = data.TestloginUrl;            // Use this line for test server login

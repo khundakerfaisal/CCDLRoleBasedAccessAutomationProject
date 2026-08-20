@@ -61,6 +61,7 @@ export class CorporateCustomerPage {
         //Navigate to Sales->Configuration->Customer
         await this.customerSubMenu.click();
 
+        // Click on the Create New button to create a new corporate customer
         await this.createNewButton.nth(2).click();
         await this.page.waitForTimeout(1000);
 
@@ -133,6 +134,8 @@ export class CorporateCustomerPage {
         //Click on the Create button to create a new account    
         const createButton =
             newPage.locator(".btn-primary");
+
+            //click on the Chart of Accounts configuration menu
         await accountingConfigurationMenu.click();
 
         //click on the Chart of Accounts menu
