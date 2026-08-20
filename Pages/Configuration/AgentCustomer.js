@@ -66,7 +66,7 @@ export class AgentCustomerPage {
 
         // Click on the Create New button to create a new Agent customer
         await this.createNewButton.nth(2).click();
-
+        await this.page.waitForTimeout(1000);
 
 
         // Create New Agent Customer Name
@@ -115,22 +115,46 @@ export class AgentCustomerPage {
         const newPage = await pagePromise;
         await newPage.waitForLoadState();
 
-        //wait for a short time to ensure the new tab is fully loaded
 
-        await newPage.waitForTimeout(500);
+
+        //wait for a short time to ensure the new tab is fully loaded
+        await newPage.waitForTimeout(2000);
+
+
 
         // Navigate to Accounting->Configuration
         const accountingConfigurationMenu =
             newPage.locator("//button[@data-menu-xmlid='account.menu_finance_configuration']");
 
 
+
+        //click on the Chart of Accounts configuration menu
+        await accountingConfigurationMenu.click();
+
+
         //wait for a short time to ensure the menu is fully loaded  
-        await newPage.waitForTimeout(500);
+        await newPage.waitForTimeout(1000);
+
 
 
         // Navigate to Accounting->Configuration->Chart of Accounts
         const chartOfAccountMenu =
             newPage.locator("//a[@data-menu-xmlid='account.menu_action_account_form']");
+
+
+
+
+
+        //click on the Chart of Accounts menu
+        await chartOfAccountMenu.click();
+
+
+
+        //wait for a short time to ensure the menu is fully loaded  
+        await newPage.waitForTimeout(1000);
+
+
+
 
 
         //Click on the Create button to create a new account   
@@ -139,17 +163,14 @@ export class AgentCustomerPage {
 
 
 
-        //click on the Chart of Accounts configuration menu
-        await accountingConfigurationMenu.click();
-
-
-
-        //click on the Chart of Accounts menu
-        await chartOfAccountMenu.click();
-
-
         //Create a new account by clicking on the Create button
         await createButton.nth(2).click();
+
+
+        //wait for a short time to ensure the menu is fully loaded  
+        await newPage.waitForTimeout(1000);
+
+
 
 
         //Input the Account Name in the Chart of Accounts
