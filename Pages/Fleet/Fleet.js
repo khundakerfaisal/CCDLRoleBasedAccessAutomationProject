@@ -61,6 +61,8 @@ class FleetPage {
         await this.fleetMainMenu.click();
 
         await this.fleetSubMenu.press("ArrowDown");
+
+
         await this.fleetSubMenu.press("Enter");
 
 
@@ -73,7 +75,7 @@ class FleetPage {
 
         await this.modelName.click();
         await this.page.waitForTimeout(1500);
-        await this.modelName.fill("Audi/A1");
+        await this.modelName.press("ArrowDown");
         await this.page.waitForTimeout(1000);
         await this.modelName.press("Enter");
 
