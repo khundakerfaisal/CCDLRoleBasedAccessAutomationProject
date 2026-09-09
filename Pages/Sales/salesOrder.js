@@ -102,44 +102,44 @@ class salesOrderInputPage {
 
         // Location
 
-        await this.selectAutocomplete(
-            this.location,
-            "Main Store/Cement Plant Main Store"
-        );
-
-        // await this.selectAutocomplete(      //Cluster server
+        // await this.selectAutocomplete(
         //     this.location,
-        //     "Main Store/Cement Plant"
+        //     "Main Store/Cement Plant Main Store"
         // );
+
+        await this.selectAutocomplete(      //Cluster server
+            this.location,
+            "Main Store/Cement Plant"
+        );
 
 
 
         // Sales Executive
 
-        await this.selectAutocomplete(
-            this.executive,
-            "Md. Zahid Hasan"
-        );
-
-        // await this.selectAutocomplete(//Cluster server
+        // await this.selectAutocomplete(
         //     this.executive,
-        //     "Abdullah Al Maruf"
+        //     "Md. Zahid Hasan"
         // );
+
+        await this.selectAutocomplete(//Cluster server
+            this.executive,
+            "Abdullah Al Maruf"
+        );
 
 
 
         // Customer
 
-        await this.selectAutocomplete(
-            this.customer,
-            "credit Test"
-        );
-
-
-        // await this.selectAutocomplete(//Cluster server
+        // await this.selectAutocomplete(
         //     this.customer,
-        //     "A J M Steel Corporation"
+        //     "credit Test"
         // );
+
+
+        await this.selectAutocomplete(//Cluster server
+            this.customer,
+            "A J M Steel Corporation"
+        );
 
 
 
@@ -176,29 +176,29 @@ class salesOrderInputPage {
         });
 
 
-        await this.selectAutocomplete(
-            this.product,
-            "PCC Cement-(CEM II-AM)"
-        );
-
-        // await this.selectAutocomplete(//Cluster server
+        // await this.selectAutocomplete(
         //     this.product,
-        //     "Composite Rajmistry"
+        //     "PCC Cement-(CEM II-AM)"
         // );
+
+        await this.selectAutocomplete(//Cluster server
+            this.product,
+            "Composite Rajmistry"
+        );
 
 
 
         // Sub District
 
-        await this.selectAutocomplete(
-            this.subDistrict,
-            "Narsingdi Sadar"
-        );
-
-        // await this.selectAutocomplete(//Cluster server
+        // await this.selectAutocomplete(
         //     this.subDistrict,
-        //     "Kotwali"
+        //     "Narsingdi Sadar"
         // );
+
+        await this.selectAutocomplete(//Cluster server
+            this.subDistrict,
+            "Cox's Bazar Sadar"
+        );
 
 
 
@@ -208,30 +208,30 @@ class salesOrderInputPage {
             state: "visible"
         });
 
-        await this.transportType.selectOption({
-            label: "CNF Cost"
-        });
-
-
-        // await this.transportType.selectOption({//cluster server
-        //     label: "CCL Cost"
+        // await this.transportType.selectOption({
+        //     label: "CNF Cost"
         // });
+
+
+        await this.transportType.selectOption({//cluster server
+            label: "CCL Cost"
+        });
 
 
         // Bag Type
 
 
 
-        await this.selectAutocomplete(
-            this.bagType,
-            "CEM II AM 1 Ply"
-        );
-
-
-        // await this.selectAutocomplete(//cluster server
+        // await this.selectAutocomplete(
         //     this.bagType,
-        //     "CEM II-AM 1 Ply "
+        //     "CEM II-AM 1 Ply"
         // );
+
+
+        await this.selectAutocomplete(//cluster server
+            this.bagType,
+            "CEM II-AM 1 Ply"
+        );
 
 
 
