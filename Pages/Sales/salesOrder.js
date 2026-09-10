@@ -32,6 +32,12 @@ class salesOrderInputPage {
         this.deliveryType = page.locator("#delivery_type_0");
         this.qtyBag = page.locator("#qty_in_bag_0");
 
+        this.CurrencyName=page.getByRole('combobox', { name: 'F. Currency Name' });
+        this.ExchangeRate=page.getByRole('textbox', { name: 'Exchange Rate in BDT' });
+        this.currencyTotal=page.getByRole('textbox', { name: 'F. Currency Total Amt.' });
+        
+
+
         this.addGridItem = page.locator(
             "//div[contains(@class,'modal-content')]//tbody[@class='ui-sortable']//a[normalize-space()='Add a line'][1]"
         );
@@ -248,6 +254,23 @@ class salesOrderInputPage {
         // Quantity
 
         await this.qtyBag.fill("20");
+
+
+
+        // Enter currency name using the Odoo autocomplete dropdown
+        await this.selectAutocomplete(this.CurrencyName, "BDT");
+
+
+
+        //Enter Exchange Rate 
+        await this.ExchangeRate.fill("115");
+
+
+
+        //Enter Currency Total
+        await this.currencyTotal.fill("500");
+
+
 
 
 
