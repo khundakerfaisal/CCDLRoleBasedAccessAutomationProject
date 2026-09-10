@@ -3,7 +3,7 @@ import fs from "fs";
 
 import LoginPage from "../../Pages/LoginPage";
 import SalesOrderInputPage from "../../Pages/Sales/salesOrder";
-import DeliveryAdvicePage from "../../Pages/Sales/DeliveryAdvice";
+import DeliveryAdviceExportPage from "../../Pages/Sales/Export/DeliveryAdviceExport";
 import FleetPage from "../../Pages/Fleet/Fleet";
 import AllocationPage from "../../Pages/Allocation/AllocationPage";
 import LoadingSlipPage from "../../Pages/VatAndDelivery/LoadingSlip";
@@ -50,9 +50,9 @@ test.describe("Sales Flow - Sales Order Bag full process check", () => {
 
     test("Create New Delivery Advice", async ({ page }) => {
 
-        const deliveryAdvice = new DeliveryAdvicePage(page);
+        const deliveryAdviceExportPage = new DeliveryAdviceExportPage(page);
 
-        await deliveryAdvice.createDeliveryAdvice();
+        await deliveryAdviceExportPage.createExportDeliveryAdvice();
 
     });
 
@@ -106,4 +106,4 @@ test.describe("Sales Flow - Sales Order Bag full process check", () => {
 
 });
 
-// npx playwright test tests/POM/ExportSalesOrderBagTest.spec.js
+// npx playwright test tests/POM/SalesOrderBagTest.spec.js

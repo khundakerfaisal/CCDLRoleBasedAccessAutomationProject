@@ -95,7 +95,8 @@ class FleetPage {
 
         await this.selectAutocomplete(
             this.location,
-            "Main Store/Cement Plant Main Store"
+            // "Main Store/Cement Plant Main Store"
+            "Main Store/Cement Plant"
         );
 
         // await this.location.fill(

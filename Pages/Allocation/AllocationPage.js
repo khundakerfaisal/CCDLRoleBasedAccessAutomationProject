@@ -123,7 +123,7 @@ class AllocationPage {
 
         // Transport Type
         await this.inputTransportType.selectOption({
-            label: "CNF Cost",
+            label: "CCL Cost",
         });
 
 
@@ -131,7 +131,8 @@ class AllocationPage {
         // Customer
         await this.selectAutocomplete(
             this.inputCustomer,
-            "credit Test"
+            // "credit Test"
+            "Eva Enterprise"
         );
 
 
