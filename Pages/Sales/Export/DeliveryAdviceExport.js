@@ -127,7 +127,7 @@ class DeliveryAdviceExportPage {
         // Customer
         await this.selectAutocomplete(
             this.customer,
-            "A J M Steel Corporation"
+            "ACE Bicycles"
         );
 
 

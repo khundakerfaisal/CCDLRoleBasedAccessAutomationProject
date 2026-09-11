@@ -145,7 +145,7 @@ class salesOrderInputPage {
         await this.selectAutocomplete(//Cluster server
             this.customer,
             // "A J M Steel Corporation"
-            "ACE Bicycles (BD) Ltd"
+            "ACE Bicycles"
         );
 
 
