@@ -21,6 +21,10 @@ class AllocationPage {
             name: 'Vehicle'
         });
 
+        this.selectDriver = page.getByRole('combobox', {
+            name: 'Driver Name & Code'
+        });
+
         this.inputCustomer = page.getByRole('combobox', {
             name: 'Partner'
         });
@@ -76,27 +80,41 @@ class AllocationPage {
         });
 
 
+
+        await this.page.waitForTimeout(1000);
+        //Select vehicle name from the dropdown
         await this.selectVehicle.click();
-        await this.selectVehicle.press("ArrowDown");
+        await this.page.waitForTimeout(1000);
+        // await this.selectVehicle.press("ArrowDown");
         await this.selectVehicle.press("Enter");
 
 
+
+        //select driver name from the dropdown
+        await this.page.waitForTimeout(2000);
+        // await this.selectDriver.press("ArrowDown");
+        // await this.selectDriver.press("Enter");
+
+
+
         // Trigger dropdown
-        await this.selectVehicle.fill("");
+        // await this.selectVehicle.fill("");
 
 
-        const vehicleOption = this.page
-            .locator(".o-autocomplete--dropdown-item")
-            .first();
 
 
-        await vehicleOption.waitFor({
-            state: "visible",
-            timeout: 15000
-        });
+        // const vehicleOption = this.page
+        //     .locator(".o-autocomplete--dropdown-item")
+        //     .first();
 
 
-        await vehicleOption.click();
+        // await vehicleOption.waitFor({
+        //     state: "visible",
+        //     timeout: 15000
+        // });
+
+
+        // await vehicleOption.click();
 
     }
 

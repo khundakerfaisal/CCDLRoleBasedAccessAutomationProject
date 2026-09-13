@@ -12,6 +12,7 @@ class LoadingSlipPage {
         this.createNewButton = page.locator(".btn-primary");
 
         this.selectAllocationNumber = page.locator("#allocation_id_0");
+
         this.selectGiftItem = page.locator("#gift_product_id_0");
         this.selectSiloNumber = page.locator("#silo_ids_0");
 
@@ -38,7 +39,15 @@ class LoadingSlipPage {
         await this.selectAllocationNumber.press("Enter");
         await this.page.waitForTimeout(1000);
 
+
+
+
         // Uncomment if needed
+        await this.selectSiloNumber.click();
+        await this.page.waitForTimeout(1000);
+        await this.selectSiloNumber.fill("Silo 2");
+        await this.selectSiloNumber.press("Enter");
+        
         // await this.selectSiloNumber.press("Backspace");
 
         await this.saveButton.click();

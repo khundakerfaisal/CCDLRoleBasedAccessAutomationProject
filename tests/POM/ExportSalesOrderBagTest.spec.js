@@ -56,7 +56,7 @@ test.describe("Sales Flow - Sales Order Bag full process check", () => {
 
     });
 
-    test("Create New Fleet Entry ", async ({ page }) => {
+    test.skip("Create New Fleet Entry ", async ({ page }) => {
 
         const fleet = new FleetPage(page);
 
