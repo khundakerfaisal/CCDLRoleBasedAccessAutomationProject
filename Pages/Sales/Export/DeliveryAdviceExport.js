@@ -109,7 +109,7 @@ class DeliveryAdviceExportPage {
         // Location
         await this.selectAutocomplete(
             this.location,
-            "Main Store/Cement Plant"
+            "Main Store/Cement Plant Main Store"
         );
 
 
@@ -127,20 +127,20 @@ class DeliveryAdviceExportPage {
         // Customer
         await this.selectAutocomplete(
             this.customer,
-            "ACE Bicycles"
+             "Export Customer 1"
         );
 
 
         // Sales Executive
-        await this.selectAutocomplete(
-            this.executive,
-            "Abdullah Al Maruf"
-        );
+        // await this.selectAutocomplete(
+        //     this.executive,
+        //     "Md. Zahid Hasan"
+        // );
 
 
 
         // Scroll to DO section
-        // await this.page.mouse.wheel(0, 1000);
+        await this.page.mouse.wheel(0, 2000);
 
 
 

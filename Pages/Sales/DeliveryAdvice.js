@@ -107,14 +107,14 @@ class DeliveryAdvicePage {
 
 
         // Location
-        // await this.selectAutocomplete(
-        //     this.location,
-        //     "Main Store/Cement Plant Main Store"
-        // );
         await this.selectAutocomplete(
             this.location,
-            "Main Store/Cement Plant"
+            "Main Store/Cement Plant Main Store"
         );
+        // await this.selectAutocomplete(
+        //     this.location,
+        //     "Main Store/Cement Plant"
+        // );
 
 
         // Delivery Address
@@ -135,7 +135,8 @@ class DeliveryAdvicePage {
         // );
         await this.selectAutocomplete(
             this.customer,
-            "A J M Steel Corporation"
+            // "A J M Steel Corporation"
+            "Export Customer 1"
         );
 
 
@@ -147,7 +148,8 @@ class DeliveryAdvicePage {
 
         await this.selectAutocomplete(
             this.executive,
-            "Abdullah Al Maruf "
+            // "Abdullah Al Maruf "
+            "Md. Zahid Hasan"
         );
 
 

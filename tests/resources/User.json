@@ -1,6 +1,8 @@
 {
     "pilotUsername": "Admin",
     "pilotPassword": "1234",
+    "ccplcTestUsername": "devops",
+    "ccplcTestPassword": "@devops2026",
     "testUsername": "devops",
     "testPassword": "@Dev2025",
     "comment": "The role use only for pilot servers."

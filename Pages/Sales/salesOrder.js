@@ -108,29 +108,29 @@ class salesOrderInputPage {
 
         // Location
 
-        // await this.selectAutocomplete(
-        //     this.location,
-        //     "Main Store/Cement Plant Main Store"
-        // );
-
-        await this.selectAutocomplete(      //Cluster server
+        await this.selectAutocomplete(
             this.location,
-            "Main Store/Cement Plant"
+            "Main Store/Cement Plant Main Store"
         );
+
+        // await this.selectAutocomplete(      //Cluster server
+        //     this.location,
+        //     "Main Store/Cement Plant"
+        // );
 
 
 
         // Sales Executive
 
-        // await this.selectAutocomplete(
-        //     this.executive,
-        //     "Md. Zahid Hasan"
-        // );
-
-        await this.selectAutocomplete(//Cluster server
+        await this.selectAutocomplete(
             this.executive,
-            "Abdullah Al Maruf"
+            "Md. Zahid Hasan"
         );
+
+        // await this.selectAutocomplete(//Cluster server
+        //     this.executive,
+        //     "Abdullah Al Maruf"
+        // );
 
 
 
@@ -145,7 +145,8 @@ class salesOrderInputPage {
         await this.selectAutocomplete(//Cluster server
             this.customer,
             // "A J M Steel Corporation"
-            "ACE Bicycles"
+            // "ACE Bicycles"
+            "Export Customer 1"
         );
 
 
@@ -190,7 +191,8 @@ class salesOrderInputPage {
 
         await this.selectAutocomplete(//Cluster server
             this.product,
-            "Composite Rajmistry"
+            // "Composite Rajmistry"
+            "Confidence Cement"
         );
 
 
@@ -204,7 +206,8 @@ class salesOrderInputPage {
 
         await this.selectAutocomplete(//Cluster server
             this.subDistrict,
-            "Cox's Bazar Sadar"
+            // "Cox's Bazar Sadar"
+            "Dhaka (Jatrabari)"
         );
 
 
@@ -221,7 +224,7 @@ class salesOrderInputPage {
 
 
         await this.transportType.selectOption({//cluster server
-            label: "CCL Cost"
+            label: "CNF Cost"
         });
 
 
@@ -237,7 +240,8 @@ class salesOrderInputPage {
 
         await this.selectAutocomplete(//cluster server
             this.bagType,
-            "CEM II-AM 1 Ply"
+            // "CEM II-AM 1 Ply"
+            "1 Ply Poly Bag Confidence"
         );
 
 
@@ -258,7 +262,7 @@ class salesOrderInputPage {
 
 
         // Enter currency name using the Odoo autocomplete dropdown
-        await this.selectAutocomplete(this.CurrencyName, "BDT");
+        await this.selectAutocomplete(this.CurrencyName, "USD");
 
 
 

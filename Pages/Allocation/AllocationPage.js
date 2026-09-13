@@ -77,6 +77,8 @@ class AllocationPage {
 
 
         await this.selectVehicle.click();
+        await this.selectVehicle.press("ArrowDown");
+        await this.selectVehicle.press("Enter");
 
 
         // Trigger dropdown
@@ -123,7 +125,7 @@ class AllocationPage {
 
         // Transport Type
         await this.inputTransportType.selectOption({
-            label: "CCL Cost",
+            label: "CNF Cost",
         });
 
 
@@ -132,7 +134,8 @@ class AllocationPage {
         await this.selectAutocomplete(
             this.inputCustomer,
             // "credit Test"
-            "Eva Enterprise"
+            // "Eva Enterprise"
+            "Export Customer 1"
         );
 
 
