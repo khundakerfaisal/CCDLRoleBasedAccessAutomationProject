@@ -26,6 +26,7 @@ export class AgentCustomerPage {
         this.selectMaritalStatus = page.locator("#marital_status_0");
         this.marriageDate = page.locator("#marriage_date_0");
         this.inputSalesExecutive = page.locator("#sales_executive_user_ids_0");
+        this.address=page.getByRole("textbox", { name: "Office Address" });
         this.paymentTypeCheck = page.locator(".form-check-label");
         this.accountingTabSwitch = page.locator(".nav-item");
         this.accountHead = page.locator("#party_account_head_0");
@@ -95,7 +96,7 @@ export class AgentCustomerPage {
         await this.ownerName.fill(customerName);  
         
         
-        
+
         await this.page.waitForTimeout(500);
 
 
@@ -284,30 +285,37 @@ export class AgentCustomerPage {
         await this.page.waitForTimeout(500);
 
 
-
-        // Scroll down to make the Accounting tab visible
-        await this.page.evaluate(() => {
-            window.scrollBy(0, 1000);
-        });
-
-
-        //Select the Accounting tab to fill in the account head
-        await this.accountingTabSwitch.nth(0).click();
+        // Input address in the Office Address field
+        await this.address.fill("123 Main Street, City, CTG");
 
 
 
-        //wait for a short time to ensure the tab is selected
-        await this.page.waitForTimeout(2000);
 
 
-        // Fill in the Account Head with the corporate customer name
-        await this.accountHead.fill(customerName);
-        await this.accountHead.press("Enter");
+
+                // // Scroll down to make the Accounting tab visible
+                // await this.page.evaluate(() => {
+                //     window.scrollBy(0, 1000);
+                // });
 
 
-        //Select the Accounting tab to fill in the  payment type
-        await this.paymentTypeCheck.nth(2).click();
-        await this.page.waitForTimeout(2000);
+                // //Select the Accounting tab to fill in the account head
+                // await this.accountingTabSwitch.nth(0).click();
+
+
+
+                // //wait for a short time to ensure the tab is selected
+                // await this.page.waitForTimeout(2000);
+
+
+                // // Fill in the Account Head with the corporate customer name
+                // await this.accountHead.fill(customerName);
+                // await this.accountHead.press("Enter");
+
+
+                // //Select the Accounting tab to fill in the  payment type
+                // await this.paymentTypeCheck.nth(2).click();
+                // await this.page.waitForTimeout(2000);
 
 
         // Scroll Up to make the Save button visible
