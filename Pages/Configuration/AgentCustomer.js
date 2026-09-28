@@ -16,6 +16,7 @@ export class AgentCustomerPage {
         // Customer
         this.createNewButton = page.locator(".btn-primary");
         this.inputCustomer = page.locator("#name_0");
+        this.ownerName=page.getByRole("textbox", { name: "Owner Name" });
         this.inputMobileNumber = page.locator("#mobile_0");
         this.selectCustomerType = page.locator("#customer_type_0");
         this.brandSelection = page.locator("#brand_id_attribute_0");
@@ -88,134 +89,146 @@ export class AgentCustomerPage {
 
 
 
+        await this.page.waitForTimeout(500);
+
+
+        await this.ownerName.fill(customerName);  
+        
+        
+        
+        await this.page.waitForTimeout(500);
+
+
+
+
         // -------------------------
         // Open Accounting in new tab
         // -------------------------
 
 
 
-        // Click on the Home Menu
-        await this.homeMenu.click();
+            // // Click on the Home Menu
+            // await this.homeMenu.click();
 
 
-        // Wait for the new page to open
-        const pagePromise = this.page.context().waitForEvent("page");
+            // // Wait for the new page to open
+            // const pagePromise = this.page.context().waitForEvent("page");
 
 
-        // Click on the Accounting Menu with middle button to open in new tab
-        await this.accountingMenu.click({
-            button: "middle"
-        });
+            // // Click on the Accounting Menu with middle button to open in new tab
+            // await this.accountingMenu.click({
+            //     button: "middle"
+            // });
 
-        // Wait for a short time to ensure the new tab is opened
-        await this.page.waitForTimeout(1000);
-
-
-        // Get the new page (tab) that was opened   
-        const newPage = await pagePromise;
-        await newPage.waitForLoadState();
+            // // Wait for a short time to ensure the new tab is opened
+            // await this.page.waitForTimeout(1000);
 
 
-
-        //wait for a short time to ensure the new tab is fully loaded
-        await newPage.waitForTimeout(2000);
+            // // Get the new page (tab) that was opened   
+            // const newPage = await pagePromise;
+            // await newPage.waitForLoadState();
 
 
 
-        // Navigate to Accounting->Configuration
-        const accountingConfigurationMenu =
-            newPage.locator("//button[@data-menu-xmlid='account.menu_finance_configuration']");
+            // //wait for a short time to ensure the new tab is fully loaded
+            // await newPage.waitForTimeout(2000);
 
 
 
-        //click on the Chart of Accounts configuration menu
-        await accountingConfigurationMenu.click();
-
-
-        //wait for a short time to ensure the menu is fully loaded  
-        await newPage.waitForTimeout(1000);
+            // // Navigate to Accounting->Configuration
+            // const accountingConfigurationMenu =
+            //     newPage.locator("//button[@data-menu-xmlid='account.menu_finance_configuration']");
 
 
 
-        // Navigate to Accounting->Configuration->Chart of Accounts
-        const chartOfAccountMenu =
-            newPage.locator("//a[@data-menu-xmlid='account.menu_action_account_form']");
+            // //click on the Chart of Accounts configuration menu
+            // await accountingConfigurationMenu.click();
+
+
+            // //wait for a short time to ensure the menu is fully loaded  
+            // await newPage.waitForTimeout(1000);
 
 
 
-
-
-        //click on the Chart of Accounts menu
-        await chartOfAccountMenu.click();
-
-
-
-        //wait for a short time to ensure the menu is fully loaded  
-        await newPage.waitForTimeout(1000);
+            // // Navigate to Accounting->Configuration->Chart of Accounts
+            // const chartOfAccountMenu =
+            //     newPage.locator("//a[@data-menu-xmlid='account.menu_action_account_form']");
 
 
 
 
 
-        //Click on the Create button to create a new account   
-        const createButton =
-            newPage.locator(".btn-primary");
+            // //click on the Chart of Accounts menu
+            // await chartOfAccountMenu.click();
 
 
 
-        //Create a new account by clicking on the Create button
-        await createButton.nth(2).click();
-
-
-        //wait for a short time to ensure the menu is fully loaded  
-        await newPage.waitForTimeout(1000);
+            // //wait for a short time to ensure the menu is fully loaded  
+            // await newPage.waitForTimeout(1000);
 
 
 
 
-        //Input the Account Name in the Chart of Accounts
-        await newPage.locator("#name_0")
-            .fill(customerName);
 
-
-        //Select the Account Type as Receivable  
-        await newPage.locator("#account_type_0")
-            .selectOption({ label: "Receivable" });
+            // //Click on the Create button to create a new account   
+            // const createButton =
+            //     newPage.locator(".btn-primary");
 
 
 
-        //wait for a short time to ensure the selection is made
-        await newPage.waitForTimeout(500);
+            // //Create a new account by clicking on the Create button
+            // await createButton.nth(2).click();
 
 
-        //Select the Account Group as Dealer sales
-        await newPage.locator("#group_id_0")
-            .fill("Dealers sales");
-
-        //wait for a short time to ensure the selection is made  
-        await newPage.waitForTimeout(500);
+            // //wait for a short time to ensure the menu is fully loaded  
+            // await newPage.waitForTimeout(1000);
 
 
-        //Press Enter to confirm the selection of the Account Group
-        await newPage.locator("#group_id_0")
-            .press("Enter");
 
-        //wait for a short time to ensure the selection is confirmed   
-        await newPage.waitForTimeout(500);
 
-        // Click on the Save button to save the new account
-        await newPage.locator("//button[@data-tooltip='Save manually']")
-            .click();
+            // //Input the Account Name in the Chart of Accounts
+            // await newPage.locator("#name_0")
+            //     .fill(customerName);
 
-        // Click on the Submit button to submit the new account
-        await newPage.locator("//button[@name='action_submit']")
-            .click();
 
-        // Click on the Done button to complete the process    
-        await newPage.locator("//button[@name='action_done']")
-            .click();
-        // Close the new tab and switch back to the original page  
-        await newPage.close();
+            // //Select the Account Type as Receivable  
+            // await newPage.locator("#account_type_0")
+            //     .selectOption({ label: "Receivable" });
+
+
+
+            // //wait for a short time to ensure the selection is made
+            // await newPage.waitForTimeout(500);
+
+
+            // //Select the Account Group as Dealer sales
+            // await newPage.locator("#group_id_0")
+            //     .fill("Dealers sales");
+
+            // //wait for a short time to ensure the selection is made  
+            // await newPage.waitForTimeout(500);
+
+
+            // //Press Enter to confirm the selection of the Account Group
+            // await newPage.locator("#group_id_0")
+            //     .press("Enter");
+
+            // //wait for a short time to ensure the selection is confirmed   
+            // await newPage.waitForTimeout(500);
+
+            // // Click on the Save button to save the new account
+            // await newPage.locator("//button[@data-tooltip='Save manually']")
+            //     .click();
+
+            // // Click on the Submit button to submit the new account
+            // await newPage.locator("//button[@name='action_submit']")
+            //     .click();
+
+            // // Click on the Done button to complete the process    
+            // await newPage.locator("//button[@name='action_done']")
+            //     .click();
+            // // Close the new tab and switch back to the original page  
+            // await newPage.close();
 
 
         // -------------------------
@@ -230,8 +243,8 @@ export class AgentCustomerPage {
 
 
         //Select Sales Executive
-        await this.inputSalesExecutive.fill("Md. Zahid Hasan");            //ccdl pilot server
-        // await this.inputSalesExecutive.fill("Abdullah Al Maruf");          //ccdl Test server
+        // await this.inputSalesExecutive.fill("Md. Zahid Hasan");            //ccdl pilot server
+        await this.inputSalesExecutive.fill("Abdullah Al Maruf");          //ccdl Test server
         await this.page.waitForTimeout(500);
         await this.inputSalesExecutive.press("Enter");
 
@@ -239,8 +252,8 @@ export class AgentCustomerPage {
 
         //Select Region
 
-        await this.inputRegion.fill("Narsingdi Sadar");             //ccdl pilot server
-        // await this.inputRegion.fill("CTG METRO");
+        // await this.inputRegion.fill("Narsingdi Sadar");             //ccdl pilot server
+        await this.inputRegion.fill("CTG METRO");
         await this.inputRegion.press("Enter");
 
 

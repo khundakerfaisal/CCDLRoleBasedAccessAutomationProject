@@ -5,5 +5,7 @@
     "ccplcTestPassword": "@devops2026",
     "testUsername": "devops",
     "testPassword": "@Dev2025",
+    "CCPLCPilotUsername": "devops",
+    "CCPLCPilotPassword": "@Dev2025",
     "comment": "The role use only for pilot servers."
 }
