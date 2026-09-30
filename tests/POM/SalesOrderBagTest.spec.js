@@ -32,8 +32,9 @@ test.describe("Sales Flow - Sales Order Bag full process check", () => {
         await loginPage.goto();
 
         await loginPage.CCLLogin(
-            user.ccplcTestUsername,
-            user.ccplcTestPassword
+            user.CCPLCPilotUsername,
+            user.CCPLCPilotPassword
+
         );
 
     });

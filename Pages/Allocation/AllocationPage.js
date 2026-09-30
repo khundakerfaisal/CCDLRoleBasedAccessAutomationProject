@@ -143,7 +143,7 @@ class AllocationPage {
 
         // Transport Type
         await this.inputTransportType.selectOption({
-            label: "CNF Cost",
+            label: "CCL Cost",
         });
 
 
@@ -153,7 +153,8 @@ class AllocationPage {
             this.inputCustomer,
             // "credit Test"
             // "Eva Enterprise"
-            "Export Customer 1"
+            // "Export Customer 1"
+            "A J M Steel Corporation"
         );
 
 
@@ -180,20 +181,16 @@ class AllocationPage {
 
 
 
-        const allocationNo = (
-            await this.allocationNumber.textContent()
-        ).trim();
-
-        await this.page.waitForTimeout(2000);
-
-
-        await AllocationNumber.saveAllocationNumber(allocationNo);
-
-        await this.page.waitForTimeout(1000);
-
-
         await this.submitButton.click();
-        await this.page.waitForTimeout(500);
+        await this.page.waitForFunction(() => {
+            const value = document
+                .querySelector("div[name='name'] span")
+                ?.textContent?.trim();
+            return Boolean(value && value !== "New");
+        }, undefined, { timeout: 15000 });
+
+        const allocationNo = (await this.allocationNumber.textContent()).trim();
+        await AllocationNumber.saveAllocationNumber(allocationNo);
 
 
     }

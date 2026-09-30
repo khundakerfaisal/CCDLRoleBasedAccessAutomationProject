@@ -95,8 +95,8 @@ class FleetPage {
 
         await this.selectAutocomplete(
             this.location,
-            "Main Store/Cement Plant Main Store"
-            // "Main Store/Cement Plant"
+            // "Main Store/Cement Plant Main Store"
+            "Main Store/Cement Plant"
         );
 
         // await this.location.fill(
@@ -123,8 +123,9 @@ class FleetPage {
 
         await this.selectAutocomplete(
             this.driverName,
-            "Md Mohabbat Ali"
+            // "Md Mohabbat Ali"
             // "Abdul Hakim"
+            "Abdul Jalil"
         );
 
 
@@ -132,7 +133,8 @@ class FleetPage {
         // Helper
         await this.selectAutocomplete(
             this.helperName,
-            "Abdul khalek"
+            // "Abdul khalek"
+            "Abdullah Al Imran"
         );
 
 
