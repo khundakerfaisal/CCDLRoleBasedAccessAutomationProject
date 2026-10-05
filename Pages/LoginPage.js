@@ -15,7 +15,7 @@ class LoginPage {
 
         // this.loginUrl = data.PilotloginUrl;               // Use this line for pilot server login
         // this.loginUrl = data.CCDLTestloginUrl;               // Use this line for CCDL server login
-        this.loginUrl = data.CCPLCPilotloginUrl;               // Use this line for CCPLC pilot server login
+        this.loginUrl = data.CCDLPilotloginUrl;               // Use this line for CCDL pilot server login
         // this.loginUrl = data.CCPLCTestloginUrl;               // Use this line for CCPLC test server login
 
         // this.loginUrl = data.TestloginUrl;            // Use this line for test server login
