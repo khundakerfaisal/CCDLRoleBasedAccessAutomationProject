@@ -142,20 +142,20 @@ class AllocationPage {
 
 
         // Transport Type
-        await this.inputTransportType.selectOption({
-            label: "CCL Cost",
-        });
+        // await this.inputTransportType.selectOption({
+        //     label: "CCL Cost",
+        // });
 
 
 
         // Customer
-        await this.selectAutocomplete(
-            this.inputCustomer,
-            // "credit Test"
-            // "Eva Enterprise"
-            // "Export Customer 1"
-            "A J M Steel Corporation"
-        );
+        // await this.selectAutocomplete(
+        //     this.inputCustomer,
+        //     // "credit Test"
+        //     // "Eva Enterprise"
+        //     // "Export Customer 1"
+        //     "A J M Steel Corporation"
+        // );
 
 
 

@@ -104,7 +104,7 @@ class salesOrderDepotPage {
 
         await this.selectAutocomplete(
             this.location,
-            "CNB Ghat"
+            "CNB Ghat, Faridpur"
         );
 
         // await this.selectAutocomplete(      //Cluster server
@@ -132,7 +132,7 @@ class salesOrderDepotPage {
 
         await this.selectAutocomplete(
             this.customer,
-            "credit Test"
+            "Akram & Sons"
         );
 
 
@@ -178,7 +178,7 @@ class salesOrderDepotPage {
 
         await this.selectAutocomplete(
             this.product,
-            "PCC Cement-(CEM II-AM)"
+            "Confidence cement"
         );
 
         // await this.selectAutocomplete(//Cluster server
@@ -224,7 +224,7 @@ class salesOrderDepotPage {
 
         await this.selectAutocomplete(
             this.bagType,
-            "CEM II AM 1 Ply"
+            "1 Ply Poly Bag Confidence"
         );
 
 

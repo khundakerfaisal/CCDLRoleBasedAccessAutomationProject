@@ -109,7 +109,7 @@ class DeliveryAdviceDepotPage {
         // Location
         await this.selectAutocomplete(
             this.location,
-            "CNB Ghat"
+            "CNB Ghat, Faridpur"
         );
 
 
@@ -127,7 +127,7 @@ class DeliveryAdviceDepotPage {
         // Customer
         await this.selectAutocomplete(
             this.customer,
-            "credit Test"
+            "Akram & Sons"
         );
 
 

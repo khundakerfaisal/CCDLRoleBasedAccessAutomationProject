@@ -96,7 +96,8 @@ class FleetPage {
         await this.selectAutocomplete(
             this.location,
             // "Main Store/Cement Plant Main Store"
-            "Main Store/Cement Plant"
+            // "Main Store/Cement Plant"
+            "CNB Ghat, Faridpur"
         );
 
         // await this.location.fill(
@@ -124,8 +125,8 @@ class FleetPage {
         await this.selectAutocomplete(
             this.driverName,
             // "Md Mohabbat Ali"
-            // "Abdul Hakim"
-            "Abdul Jalil"
+            "Abdul Hakim"
+            // "Abdul Jalil"
         );
 
 
@@ -133,8 +134,8 @@ class FleetPage {
         // Helper
         await this.selectAutocomplete(
             this.helperName,
-            // "Abdul khalek"
-            "Abdullah Al Imran"
+            "Abdul khalek"
+            // "Abdullah Al Imran"
         );
 
 

@@ -32,8 +32,8 @@ test.describe("Sales Flow - Sales Order Bag full process check", () => {
         await loginPage.goto();
 
         await loginPage.CCLLogin(
-            user.CCPLCPilotUsername,
-            user.CCPLCPilotPassword
+            user.CCDLpilotUsername,
+            user.CCDLpilotPassword
 
         );
 
@@ -107,4 +107,4 @@ test.describe("Sales Flow - Sales Order Bag full process check", () => {
 
 });
 
-// npx playwright test tests/POM/ExportSalesOrderBagTest.spec.js
+// npx playwright test tests/POM/AgentSalesOrderBagTest.spec.js

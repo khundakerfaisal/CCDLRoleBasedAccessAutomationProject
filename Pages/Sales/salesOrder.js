@@ -108,10 +108,10 @@ class salesOrderInputPage {
 
         // Location
 
-        // await this.selectAutocomplete(
-        //     this.location,
-        //     "Main Store/Cement Plant Main Store"
-        // );
+        await this.selectAutocomplete(
+            this.location,
+            "Main Store/Cement Plant Main Store"
+        );
 
         await this.selectAutocomplete(      //Cluster server
             this.location,
@@ -122,15 +122,15 @@ class salesOrderInputPage {
 
         // Sales Executive
 
-        // await this.selectAutocomplete(
-        //     this.executive,
-        //     "Md. Zahid Hasan"
-        // );
-
-        await this.selectAutocomplete(//Cluster server
+        await this.selectAutocomplete(
             this.executive,
-            "Abdullah Al Maruf"
+            "Md. Zahid Hasan"
         );
+
+        // await this.selectAutocomplete(//Cluster server
+        //     this.executive,
+        //     "Abdullah Al Maruf"
+        // );
 
 
 

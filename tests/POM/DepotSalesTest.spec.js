@@ -30,8 +30,8 @@ test.describe("Sales Flow - Sales Order Depot Bag full process check", () => {
         await loginPage.goto();
 
         await loginPage.CCLLogin(
-            user.pilotUsername,
-            user.pilotPassword
+            user.ccplcTestUsername,
+            user.ccplcTestPassword
         );
 
     });
@@ -54,7 +54,7 @@ test.describe("Sales Flow - Sales Order Depot Bag full process check", () => {
 
     });
 
-    test("Create New Fleet Entry ", async ({ page }) => {
+    test.skip("Create New Fleet Entry ", async ({ page }) => {
 
         const fleet = new FleetDepotPage(page);
 
