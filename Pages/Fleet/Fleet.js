@@ -95,9 +95,9 @@ class FleetPage {
 
         await this.selectAutocomplete(
             this.location,
-            // "Main Store/Cement Plant Main Store"
+            "Main Store/Cement Plant Main Store"
             // "Main Store/Cement Plant"
-            "CNB Ghat, Faridpur"
+            // "CNB Ghat, Faridpur"
         );
 
         // await this.location.fill(

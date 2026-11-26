@@ -113,10 +113,10 @@ class salesOrderInputPage {
             "Main Store/Cement Plant Main Store"
         );
 
-        await this.selectAutocomplete(      //Cluster server
-            this.location,
-            "Main Store/Cement Plant"
-        );
+        // await this.selectAutocomplete(      //Cluster server
+        //     this.location,
+        //     "Main Store/Cement Plant"
+        // );
 
 
 
@@ -144,7 +144,7 @@ class salesOrderInputPage {
 
         await this.selectAutocomplete(//Cluster server
             this.customer,
-            "A J M Steel Corporation"
+            "Akram & Sons"
             // "ACE Bicycles"
             // "Export Customer 1"
         );
@@ -191,24 +191,24 @@ class salesOrderInputPage {
 
         await this.selectAutocomplete(//Cluster server
             this.product,
-            "Composite Rajmistry"
-            // "Confidence Cement"
+            // "Composite Rajmistry"
+            "Confidence Cement"
         );
 
 
 
         // Sub District
 
-        // await this.selectAutocomplete(
-        //     this.subDistrict,
-        //     "Narsingdi Sadar"
-        // );
-
-        await this.selectAutocomplete(//Cluster server
+        await this.selectAutocomplete(
             this.subDistrict,
-            "Cox's Bazar Sadar"
-            // "Dhaka (Jatrabari)"
+            "Narsingdi Sadar"
         );
+
+        // await this.selectAutocomplete(//Cluster server
+        //     this.subDistrict,
+        //     "Cox's Bazar Sadar"
+        //     // "Dhaka (Jatrabari)"
+        // );
 
 
 
@@ -218,31 +218,31 @@ class salesOrderInputPage {
             state: "visible"
         });
 
-        // await this.transportType.selectOption({
-        //     label: "CNF Cost"
-        // });
-
-
-        await this.transportType.selectOption({//cluster server
-            label: "CCL Cost"
+        await this.transportType.selectOption({
+            label: "CNF Cost"
         });
+
+
+        // await this.transportType.selectOption({//cluster server
+        //     label: "CCL Cost"
+        // });
 
 
         // Bag Type
 
 
 
-        await this.selectAutocomplete(
-            this.bagType,
-            "CEM II-AM 1 Ply"
-        );
-
-
-        // await this.selectAutocomplete(//cluster server
+        // await this.selectAutocomplete(
         //     this.bagType,
-        //     // "CEM II-AM 1 Ply"
-        //     "1 Ply Poly Bag Confidence"
+        //     "CEM II-AM 1 Ply"
         // );
+
+
+        await this.selectAutocomplete(//cluster server
+            this.bagType,
+            // "CEM II-AM 1 Ply"
+            "1 Ply Poly Bag Confidence"
+        );
 
 
 

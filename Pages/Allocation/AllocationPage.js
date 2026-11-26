@@ -182,6 +182,7 @@ class AllocationPage {
 
 
         await this.submitButton.click();
+        await this.page.waitForTimeout(1000);
         await this.page.waitForFunction(() => {
             const value = document
                 .querySelector("div[name='name'] span")

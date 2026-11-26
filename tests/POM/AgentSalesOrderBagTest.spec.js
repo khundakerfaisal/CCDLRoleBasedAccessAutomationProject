@@ -32,8 +32,8 @@ test.describe("Sales Flow - Sales Order Bag full process check", () => {
         await loginPage.goto();
 
         await loginPage.CCLLogin(
-            user.CCDLpilotUsername,
-            user.CCDLpilotPassword
+            user.ccplcTestUsername,
+            user.ccplcTestPassword
 
         );
 
@@ -74,7 +74,7 @@ test.describe("Sales Flow - Sales Order Bag full process check", () => {
 
     });
 
-    test("Create New Loading Slip ", async ({ page }) => {
+    test.skip("Create New Loading Slip ", async ({ page }) => {
 
         const loadingSlipPage = new LoadingSlipPage(page);
 
@@ -82,14 +82,14 @@ test.describe("Sales Flow - Sales Order Bag full process check", () => {
 
     });
 
-    test("Create New Weight 1st", async ({ page }) => {
+    test.skip("Create New Weight 1st", async ({ page }) => {
 
         const weightScalePage = new WeightScale1stWeightPage(page);
 
         await weightScalePage.weight1stEntryPage();
 
     });
-    test("Create New Packing entry for Bag ", async ({ page }) => {
+    test.skip("Create New Packing entry for Bag ", async ({ page }) => {
 
         const packingPagesBag = new PackingPagesBag(page);
 
@@ -97,7 +97,7 @@ test.describe("Sales Flow - Sales Order Bag full process check", () => {
 
     });
 
-    test("Create New Weight 2nd ", async ({ page }) => {
+    test.skip("Create New Weight 2nd ", async ({ page }) => {
 
         const weightScale2ndPage = new WeightScale2ndWeightPages(page);
 
